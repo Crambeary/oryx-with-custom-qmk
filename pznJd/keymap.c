@@ -17,7 +17,7 @@ enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
   ST_MACRO_0,
   ST_MACRO_1,
-  MIDI_CC80 = SAFE_RANGE,
+  MIDI_CC80,
 };
 
 
