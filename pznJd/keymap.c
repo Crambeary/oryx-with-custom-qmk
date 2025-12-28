@@ -5,6 +5,9 @@
 #define ZSA_SAFE_RANGE SAFE_RANGE
 #endif
 
+#include "midi.h"
+#include "process_midi.h"
+
 extern MidiDevice midi_device;
 
 #define MIDI_CC_OFF 0
@@ -306,9 +309,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
   case MIDI_CC80:
     if (record->event.pressed) {
-      midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_ON);
+      midi_send_cc(&midi_device,
+#ifdef MIDI_ADVANCED
+                   midi_config.channel,
+#else
+                   0,
+#endif
+                   80, MIDI_CC_ON);
     } else {
-      midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_OFF);
+      midi_send_cc(&midi_device,
+#ifdef MIDI_ADVANCED
+                   midi_config.channel,
+#else
+                   0,
+#endif
+                   80, MIDI_CC_OFF);
     }
     return true;
   case QK_MODS ... QK_MODS_MAX:
