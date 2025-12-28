@@ -13,43 +13,43 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(3, KC_M)
-#define DUAL_FUNC_1 LT(2, KC_F21)
-#define DUAL_FUNC_2 LT(10, KC_K)
-#define DUAL_FUNC_3 LT(12, KC_F11)
-#define DUAL_FUNC_4 LT(9, KC_F12)
-#define DUAL_FUNC_5 LT(9, KC_F7)
-#define DUAL_FUNC_6 LT(1, KC_4)
-#define DUAL_FUNC_7 LT(3, KC_F15)
-#define DUAL_FUNC_8 LT(7, KC_F)
-#define DUAL_FUNC_9 LT(10, KC_N)
-#define DUAL_FUNC_10 LT(11, KC_F21)
-#define DUAL_FUNC_11 LT(3, KC_F18)
-#define DUAL_FUNC_12 LT(5, KC_F1)
-#define DUAL_FUNC_13 LT(7, KC_F13)
-#define DUAL_FUNC_14 LT(13, KC_0)
-#define DUAL_FUNC_15 LT(4, KC_9)
-#define DUAL_FUNC_16 LT(8, KC_9)
-#define DUAL_FUNC_17 LT(15, KC_S)
-#define DUAL_FUNC_18 LT(2, KC_F8)
-#define DUAL_FUNC_19 LT(8, KC_E)
-#define DUAL_FUNC_20 LT(13, KC_6)
-#define DUAL_FUNC_21 LT(13, KC_3)
-#define DUAL_FUNC_22 LT(2, KC_X)
-#define DUAL_FUNC_23 LT(2, KC_F24)
-#define DUAL_FUNC_24 LT(12, KC_F22)
-#define DUAL_FUNC_25 LT(9, KC_F6)
-#define DUAL_FUNC_26 LT(12, KC_F6)
-#define DUAL_FUNC_27 LT(12, KC_F9)
-#define DUAL_FUNC_28 LT(14, KC_F23)
-#define DUAL_FUNC_29 LT(6, KC_I)
-#define DUAL_FUNC_30 LT(15, KC_I)
-#define DUAL_FUNC_31 LT(9, KC_5)
-#define DUAL_FUNC_32 LT(1, KC_0)
-#define DUAL_FUNC_33 LT(4, KC_8)
-#define DUAL_FUNC_34 LT(9, KC_P)
-#define DUAL_FUNC_35 LT(3, KC_F16)
-#define DUAL_FUNC_36 LT(8, KC_K)
+#define DUAL_FUNC_0 LT(15, KC_D)
+#define DUAL_FUNC_1 LT(15, KC_2)
+#define DUAL_FUNC_2 LT(5, KC_F3)
+#define DUAL_FUNC_3 LT(10, KC_B)
+#define DUAL_FUNC_4 LT(3, KC_C)
+#define DUAL_FUNC_5 LT(1, KC_Q)
+#define DUAL_FUNC_6 LT(11, KC_F22)
+#define DUAL_FUNC_7 LT(5, KC_F18)
+#define DUAL_FUNC_8 LT(1, KC_6)
+#define DUAL_FUNC_9 LT(12, KC_I)
+#define DUAL_FUNC_10 LT(6, KC_F21)
+#define DUAL_FUNC_11 LT(7, KC_F21)
+#define DUAL_FUNC_12 LT(12, KC_3)
+#define DUAL_FUNC_13 LT(1, KC_F8)
+#define DUAL_FUNC_14 LT(2, KC_R)
+#define DUAL_FUNC_15 LT(14, KC_Z)
+#define DUAL_FUNC_16 LT(2, KC_E)
+#define DUAL_FUNC_17 LT(12, KC_9)
+#define DUAL_FUNC_18 LT(13, KC_F16)
+#define DUAL_FUNC_19 LT(4, KC_F11)
+#define DUAL_FUNC_20 LT(9, KC_F17)
+#define DUAL_FUNC_21 LT(3, KC_4)
+#define DUAL_FUNC_22 LT(5, KC_F11)
+#define DUAL_FUNC_23 LT(14, KC_F3)
+#define DUAL_FUNC_24 LT(14, KC_F17)
+#define DUAL_FUNC_25 LT(4, KC_F12)
+#define DUAL_FUNC_26 LT(12, KC_F5)
+#define DUAL_FUNC_27 LT(3, KC_F1)
+#define DUAL_FUNC_28 LT(14, KC_0)
+#define DUAL_FUNC_29 LT(11, KC_F2)
+#define DUAL_FUNC_30 LT(8, KC_F18)
+#define DUAL_FUNC_31 LT(8, KC_F24)
+#define DUAL_FUNC_32 LT(2, KC_T)
+#define DUAL_FUNC_33 LT(6, KC_4)
+#define DUAL_FUNC_34 LT(9, KC_V)
+#define DUAL_FUNC_35 LT(13, KC_5)
+#define DUAL_FUNC_36 LT(12, KC_Q)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -150,6 +150,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_LEFT_ALT,    ST_MACRO_0,     KC_NO,          ST_MACRO_1,     KC_NO,                                          KC_0,           KC_1,           KC_2,           KC_3,           MT(MOD_LALT, KC_SLASH),KC_DELETE,      
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
+  [14] = LAYOUT_voyager(
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_BSPC,        KC_SPACE
+  ),
 };
 
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
@@ -165,6 +172,8 @@ const uint16_t PROGMEM combo1[] = { KC_SPACE, KC_LEFT_ALT, COMBO_END};
 const uint16_t PROGMEM combo2[] = { KC_BSLS, KC_J, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_V, LT(5, KC_ENTER), COMBO_END};
 const uint16_t PROGMEM combo4[] = { LT(13, KC_SPACE), KC_K, COMBO_END};
+const uint16_t PROGMEM combo5[] = { KC_BSPC, LT(13, KC_SPACE), KC_M, COMBO_END};
+const uint16_t PROGMEM combo6[] = { KC_SPACE, KC_M, KC_BSPC, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, TG(8)),
@@ -172,6 +181,8 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo2, TO(10)),
     COMBO(combo3, TT(2)),
     COMBO(combo4, TT(6)),
+    COMBO(combo5, TT(14)),
+    COMBO(combo6, TO(0)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
