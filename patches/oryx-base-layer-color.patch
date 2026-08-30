@@ -1,13 +1,9 @@
-diff --git a/modules/zsa/oryx/oryx.c b/modules/zsa/oryx/oryx.c
-index 5131a18..99c1096 100644
 --- a/modules/zsa/oryx/oryx.c
 +++ b/modules/zsa/oryx/oryx.c
-@@ -191,6 +191,16 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
-             }
- #else
+@@ -197,6 +197,16 @@
              oryx_error(ORYX_ERR_RGB_MATRIX_NOT_ENABLED);
-+#endif
-+            break;
+ #endif
+             break;
 +        case ORYX_SET_BASE_LAYER_COLOR:
 +#if defined(RGB_MATRIX_ENABLE) && !defined(PROTOCOL_LUFA)
 +            // Only visible on layers that don't paint their own ledmap in set_layer_color();
@@ -16,17 +12,17 @@ index 5131a18..99c1096 100644
 +            rgb_matrix_sethsv_noeeprom(param[0], param[1], param[2]);
 +#else
 +            oryx_error(ORYX_ERR_RGB_MATRIX_NOT_ENABLED);
- #endif
-             break;
++#endif
++            break;
          case ORYX_SET_STATUS_LED:
-diff --git a/modules/zsa/oryx/oryx.h b/modules/zsa/oryx/oryx.h
-index 4f3011c..f005759 100644
+             rawhid_state.status_led_control = true; // Eagerly take control of the status LEDs
+             switch (param[0]) {
 --- a/modules/zsa/oryx/oryx.h
 +++ b/modules/zsa/oryx/oryx.h
-@@ -39,6 +39,7 @@ enum Oryx_Command_Code {
-     ORYX_UPDATE_BRIGHTNESS,
-     ORYX_SET_RGB_LED_ALL,
+@@ -41,6 +41,7 @@
      ORYX_STATUS_LED_CONTROL,
+     ORYX_SET_AUTOMOUSE,
+     ORYX_GET_AUTOMOUSE,
 +    ORYX_SET_BASE_LAYER_COLOR,
      ORYX_GET_PROTOCOL_VERSION = 0xFE,
  };
