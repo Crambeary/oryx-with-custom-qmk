@@ -89,6 +89,18 @@ jobs:
           git commit -m "✨(qmk): Update firmware" || echo "No QMK change"
           git push
 
+      - name: Apply firmware patches
+        run: |
+          shopt -s nullglob
+          for patch in patches/*.patch; do
+            echo "Applying $patch"
+            (cd qmk_firmware && git apply --check "../$patch") || {
+              echo "::error::$patch no longer applies cleanly to the synced qmk_firmware submodule. Re-diff it against the current firmware and update the file in patches/."
+              exit 1
+            }
+            (cd qmk_firmware && git apply "../$patch")
+          done
+
       - name: Build qmk docker image
         run: docker build -t qmk .
 
