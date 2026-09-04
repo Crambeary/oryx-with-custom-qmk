@@ -23,7 +23,7 @@
 #undef MOUSEKEY_WHEEL_INTERVAL
 #define MOUSEKEY_WHEEL_INTERVAL 101
 
-#define SERIAL_NUMBER "pznJd/orD6Mr"
+#define SERIAL_NUMBER "pznJd/nlyx5x"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 7
 
